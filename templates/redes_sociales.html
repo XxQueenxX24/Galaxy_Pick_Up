@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Redes Sociales</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,18 +13,22 @@
             padding-top: 30px;
             padding-bottom: 30px;
         }
+
         h1 {
             color: #333;
         }
+
         h2 {
             margin-top: 35px;
             color: #333;
         }
+
         p {
             color: #555;
             max-width: 500px;
             margin: 5px auto 15px auto;
         }
+
         .boton {
             display: block;
             width: 280px;
@@ -36,8 +41,11 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         .youtube { background-color: #FF0000; }
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
         .tiktok { background-color: #000000; }
         .facebook { background-color: #1877F2; }
         .spotify { background-color: #1DB954; }
@@ -45,9 +53,81 @@
         .boton:hover {
             opacity: 0.8;
         }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-contenedor {
+            position: fixed;
+            top: 20px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .menu-boton {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .menu-opciones {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 55px;
+            min-width: 180px;
+            background: #211027;
+            border: 1px solid #c13584;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .menu-opciones.activo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-opciones a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .menu-opciones a:hover {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d);
+        }
+
+        @media (max-width: 600px) {
+            .menu-contenedor {
+                top: 12px;
+                right: 12px;
+            }
+
+            .boton {
+                max-width: 85%;
+            }
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- MENÚ -->
+    <div class="menu-contenedor menu-instagram">
+        <button class="menu-boton"
+            onclick="document.querySelector('.menu-opciones').classList.toggle('activo')">
+            ☰
+        </button>
+
+        <nav class="menu-opciones">
+            <a href="{{ url_for('pick_ups') }}">Inicio / Pick Ups</a>
+            <a href="{{ url_for('redes_sociales') }}">Redes sociales</a>
+            <a href="{{ url_for('eventos') }}">Eventos</a>
+        </nav>
+    </div>
 
     <h1>Mis Redes Favoritas</h1>
     <p>Haz click en cualquiera para ir a la cuenta oficial:</p>
