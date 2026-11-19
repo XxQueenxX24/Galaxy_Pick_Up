@@ -65,8 +65,7 @@ def administrador_requerido(func):
 # PÁGINA PRINCIPAL
 @app.route("/")
 def inicio():
-    return redirect(url_for("eventos"))
-
+    return render_template("pick_ups.html")
 
 # MOSTRAR EVENTOS PÚBLICOS
 @app.route("/eventos")
