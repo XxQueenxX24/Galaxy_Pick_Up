@@ -4,7 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Picós del Caribe Colombiano</title>    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
 </head>  
-<body>    <header class="hero">  
+<body> <div class="menu-contenedor">
+  <button class="menu-boton" onclick="document.querySelector('.menu-opciones').classList.toggle('activo')">
+    ☰
+  </button>
+
+  <nav class="menu-opciones">
+    <a href="{{ url_for('pick_ups') }}">Inicio / Pick Ups</a>
+    <a href="{{ url_for('redes_sociales') }}">Redes sociales</a>
+    <a href="{{ url_for('eventos') }}">Eventos</a>
+  </nav>
+</div>    <header class="hero">  
     <img src="{{ url_for('static', filename='img/galaxy.jpeg') }}" alt="Galaxy Picotero">  
     <div class="hero-texto">  
       <h1>PICÓS</h1>  
