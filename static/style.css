@@ -186,14 +186,45 @@ footer {
 }
 }
 
-<div class="menu-contenedor">
-  <button class="menu-boton" onclick="document.querySelector('.menu-opciones').classList.toggle('activo')">
-    ☰
-  </button>
+.menu-contenedor {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 100;
+}
 
-  <nav class="menu-opciones">
-    <a href="{{ url_for('pick_ups') }}">Inicio / Pick Ups</a>
-    <a href="{{ url_for('redes_sociales') }}">Redes sociales</a>
-    <a href="{{ url_for('eventos') }}">Eventos</a>
-  </nav>
-</div>
+.menu-boton {
+  background: #000;
+  color: #fff;
+  border: 1px solid #ff6a00;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.menu-opciones {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background: #111;
+  min-width: 180px;
+  border: 1px solid #ff6a00;
+  border-radius: 6px;
+}
+
+.menu-opciones.activo {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-opciones a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.menu-opciones a:hover {
+  background: #ff6a00;
+}
