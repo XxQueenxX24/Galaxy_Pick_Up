@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar evento - Galaxy Picotero</title>
+</head>
+<body>
+
+    <h1>Editar evento</h1>
+
+    <form method="POST">
+
+        <input type="text" name="pico"
+               value="{{ evento.pico }}" required
+               placeholder="Nombre del picó">
+
+        <input type="text" name="evento"
+               value="{{ evento.evento }}" required
+               placeholder="Nombre del evento">
+
+        <input type="date" name="fecha"
+               value="{{ evento.fecha.strftime('%Y-%m-%d') }}" required>
+
+        <input type="time" name="hora"
+               value="{{ evento.hora.strftime('%H:%M') }}" required>
+
+        <input type="text" name="direccion"
+               value="{{ evento.direccion }}" required
+               placeholder="Dirección o lugar">
+
+        <button type="submit">Guardar cambios</button>
+
+    </form>
+
+    <a href="{{ url_for('admin') }}">Volver</a>
+
+</body>
+</html>

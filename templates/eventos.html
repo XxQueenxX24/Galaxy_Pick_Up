@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Galaxy Picotero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='eventos.css') }}">
+</head>
+<body>
+
+    <section class="eventos">
+
+        <h1>AGENDA DE EVENTOS</h1>
+        <p>Próximas presentaciones de los picós</p>
+
+        <div class="tabla-contenedor">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Picó</th>
+                        <th>Evento</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Dirección</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for e in eventos %}
+                    <tr>
+                        <td>{{ e.pico }}</td>
+                        <td>{{ e.evento }}</td>
+                        <td>{{ e.fecha }}</td>
+                        <td>{{ e.hora }}</td>
+                        <td>{{ e.direccion }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="5">Todavía no hay eventos registrados</td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

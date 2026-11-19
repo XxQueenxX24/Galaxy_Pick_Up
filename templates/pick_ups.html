@@ -1,0 +1,211 @@
+<!DOCTYPE html>  <html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Picós del Caribe Colombiano</title>    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">  
+</head>  
+<body>    <header class="hero">  
+    <img src="{{ url_for('static', filename='img/galaxy.jpeg') }}" alt="Galaxy Picotero">  
+    <div class="hero-texto">  
+      <h1>PICÓS</h1>  
+      <p>Potencia, barrio y cultura del Caribe</p>  
+    </div>  
+  </header>    <nav class="menu">  
+    <a href="#historia">Historia</a>  
+    <a href="#modelos">20 de nuestros Picós</a>  
+    <a href="#galeria">Galería</a>  
+  </nav>    <main>  <section id="historia" class="seccion">  
+  <h2>Historia</h2>  
+  <p>El picó (del inglés pick-up) es el potente sistema de sonido que anima las verbenas, los bailes de Carnaval y las fiestas de barrio del Caribe colombiano.</p>  
+
+  <p>Según el historiador Laín Domínguez, el primero de Barranquilla surgió en 1937 en el barrio San Roque con el nombre de Eco del Ritmo. En los años cincuenta aparecieron equipos más grandes, en los sesenta llegó el boom picótero y la década del setenta fue considerada la gloria del picó.</p>  
+
+  <p>Hoy los picós tradicionales en formato turbo, con su gran bafle central pintado, han vuelto a ganar terreno, y los especialistas calculan unos 6.000 picós y turbos solo en Barranquilla.</p>  
+
+  <p>Detrás de cada picó hay muchos oficios: carpinteros que arman el escaparate de madera, técnicos electrónicos, pintores que decoran la tela del bafle principal con colores fosforescentes, programadores musicales y DJ que cuidan sus discos en vinilo.</p>  
+</section>  
+
+<section id="modelos" class="seccion">  
+  <h2>Los 20 Picós más reconocidos en la región Atlántico</h2>  
+
+  <p>Estos son 20 de los picós más famosos y reconocidos por las personas de nuestra región atlántica, que gracias a ellas podemos crear cultura y recuerdos especiales entre nosotros.</p>  
+
+  <div class="tarjetas">  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/rumbero.jpg') }}" alt="El Rumbero Mayor">  
+      <h3>1. El Rumbero Mayor</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡Que viva la rumba!</p>  
+      <p>Es uno de los picós que han llegado a representar a toda la cultura picotera. Su foto es la imagen principal del artículo de Wikipedia dedicado al picó. Su nombre lo inscribe en la tradición del baile y la salsa que dio origen a estos equipos.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/demoledor.jpg') }}" alt="El Demoledor">  
+      <h3>2. El Demoledor</h3>  
+      <p><b>Ubicación:</b> Santa Marta, Magdalena<br><b>Lema:</b> ¡Demoliendo pistas, nadie nos para!</p>  
+      <p>Picó de estilo turbo de Santa Marta. En Santa Marta el picó quedó registrado como patrimonio cultural del distrito en 2016. ASOPIMARTA agrupa a unos 50 picós y la ciudad cuenta con barrios muy picoteros como Pescaíto.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/quillero.jpg') }}" alt="Quillero">  
+      <h3>3. Quillero</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> El orgullo quillero</p>  
+      <p>"Quillero" es la forma popular y cariñosa de llamar a los barranquilleros, derivada de "Quilla". Los gritos de batalla, llamados placas, son parte esencial de la identidad de un picó.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/timbalero.jpg') }}" alt="El Timbalero">  
+      <h3>4. El Timbalero</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡Al ritmo del timbal, la rumba no tiene final!</p>  
+      <p>Uno de los picós históricos de Barranquilla de los años setenta y ochenta. Su dueño y DJ es Alex Alemán, que forma parte de las dinastías de picoteros veteranos de la ciudad.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/coreano.jpg') }}" alt="El Coreano">  
+      <h3>5. El Coreano</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> El tanque de guerra</p>  
+      <p>Debe su nombre a Concepción Hernández, quien estuvo en la guerra de Corea. En los sesenta puso a bailar a Barranquilla bajo el nombre de "Coreano No. 1, el tanque de guerra". Se le reconoce un papel fundamental en la historia de la salsa en la ciudad.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/artista.jpg') }}" alt="El Artista">  
+      <h3>6. El Artista</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> Un artista en cada toque</p>  
+      <p>El Artista Turbo aparece en el video "El famoso Artista Turbo - La Picoton 2020". El picó es un artista, porque en su dibujo hay un alma y un sentir que plasma un artista plástico, y sus muebles los diseña un carpintero.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/americano.jpg') }}" alt="Turbo Americano">  
+      <h3>7. Turbo Americano</h3>  
+      <p><b>Ubicación:</b> Costa Caribe<br><b>Lema:</b> El turbo que hace vibrar al barrio</p>  
+      <p>Los turbos se pusieron de moda desde 2013 como un retorno modernizado a los picós monolíticos tipo escaparate. Un nombre como Turbo Americano se inscribe en esa ola que combina la estética de ayer con la tecnología de hoy.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/yanda.jpg') }}" alt="Yanda">  
+      <h3>8. Yanda</h3>  
+      <p><b>Ubicación:</b> Costa Caribe<br><b>Lema:</b> Con Yanda, la fiesta no se acaba</p>  
+      <p>Detrás de cada picó suele haber una familia o un grupo de amigos que arma el equipo pieza por pieza, voltio por voltio. El picó es también un oficio y una economía popular que mueve carpinteros, pintores, técnicos, DJ, animadores y vendedores.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/skorpion.jpg') }}" alt="El Skorpion">  
+      <h3>9. El Skorpion</h3>  
+      <p><b>Ubicación:</b> Barranquilla, barrio Chiquinquirá<br><b>Lema:</b> El aguijón de la rumba</p>  
+      <p>El Skorpion Disco Show es una máquina musical que lleva en la ciudad desde los años noventa y fue creada por César Mercado Castañeda. En 2017 el cantante de champeta Kevin Flórez compró los equipos para rescatar ese patrimonio musical.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/rojo.jpg') }}" alt="El Rojo">  
+      <h3>10. El Rojo</h3>  
+      <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> Rojo de pasión, rumba de corazón</p>  
+      <p>Uno de los picós más icónicos de Colombia. Lo dirige César Romero. Es sinónimo de uno de los éxitos más grandes de la verbena: "El Satánas". Ha servido durante décadas como un espacio de resistencia cultural, un puente sonoro entre África, el barrio y la ciudad.</p>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/11huracan.jpg') }}" alt="El Huracán">  
+      <div class="contenido">  
+        <h3>11. El Huracán</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El viento que arrasa con la pista!</p>  
+        <p>El Huracán representa la fuerza y la energía de la cultura picotera. Su nombre transmite potencia y velocidad, como una máquina musical capaz de encender cualquier baile y reunir a los amantes de la música caribeña.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/12elgranlobo.jpg') }}" alt="El Gran Lobo">  
+      <div class="contenido">  
+        <h3>12. El Gran Lobo</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El emperador del sonido!</p>  
+        <p>El Gran Lobo es uno de los nombres representativos de la tradición picotera barranquillera. Su identidad está relacionada con la potencia musical, el ambiente de las verbenas y la pasión de los seguidores que disfrutan del sonido de estos grandes equipos.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/13jude.jpg') }}" alt="Jude">  
+      <div class="contenido">  
+        <h3>13. El Jude</h3>  
+        <p><b>Ubicación:</b> Malambo, Atlántico<br><b>Lema:</b> ¡Una tradición que nunca deja de sonar!</p>  
+        <p>El Jude representa una tradición familiar dentro de la cultura picotera del Atlántico. Su historia está vinculada a varias generaciones de amantes de los picós y a la conservación de esta expresión musical popular de la región Caribe.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/14nuevolatino.jpg') }}" alt="Picó Nuevo Latino">  
+      <div class="contenido">  
+        <h3>14. El Nuevo Latino</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El sabor latino que conquista generaciones!</p>  
+        <p>El Nuevo Latino refleja la unión entre los ritmos tropicales y la cultura musical de los barrios. Su nombre evoca el sabor de la salsa y los sonidos caribeños que han acompañado durante décadas las fiestas populares.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/15elcobra.jpg') }}" alt="El Cobra">  
+      <div class="contenido">  
+        <h3>15. El Cobra</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El veneno musical de la Costa!</p>  
+        <p>El Cobra representa la fuerza y la personalidad de los picós de la región Caribe. Su nombre transmite carácter y competencia musical, características que forman parte de la identidad de las máquinas de sonido que animan las verbenas.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/16bambam.jpg') }}" alt="Bam Bam">  
+      <div class="contenido">  
+        <h3>16. El Bam Bam</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡Retumbando en cada rincón!</p>  
+        <p>El Bam Bam se identifica con la potencia de los bajos y el ritmo contagioso de la música tropical. Su nombre recuerda el impacto del sonido de los picós, que convierten cualquier espacio en una pista de baile llena de alegría.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/17elsambio.jpg') }}" alt="El Sambio">  
+      <div class="contenido">  
+        <h3>17. El Sambio</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El ritmo que nunca se detiene!</p>  
+        <p>Este picó representa el espíritu alegre de la cultura picotera. Su propuesta visual y su identidad musical hacen parte del universo de sonidos, colores y expresiones populares que caracterizan las fiestas de la Costa Caribe.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/18yiyo.jpg') }}" alt="El Yiyo">  
+      <div class="contenido">  
+        <h3>18. El Yiyo</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡El sabor que pone a todos a bailar!</p>  
+        <p>El Yiyo hace parte de los nombres que identifican a los equipos de sonido de la tradición picotera barranquillera. Su presencia representa el encuentro entre la música, el baile y la comunidad en las celebraciones populares.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/19lasalsadeptorico.jpg') }}" alt="La Salsa De Puerto Rico">  
+      <div class="contenido">  
+        <h3>19. La Salsa Deportivo</h3>  
+        <p><b>Ubicación:</b> Barranquilla, Atlántico<br><b>Lema:</b> ¡La salsa se vive, se siente y se baila!</p>  
+        <p>La Salsa Deportivo destaca la relación entre la música salsera y la cultura de los barrios. Su nombre evoca las reuniones musicales donde la salsa se convierte en protagonista y los bailadores disfrutan de cada canción.</p>  
+      </div>  
+    </article>  
+
+    <article class="tarjeta">  
+      <img src="{{ url_for('static', filename='img/20principe.jpg') }}" alt="El Príncipe">  
+      <div class="contenido">  
+        <h3>20. El Príncipe</h3>  
+        <p><b>Ubicación:</b> Cartagena, Bolívar<br><b>Lema:</b> ¡El heredero del trono musical!</p>  
+        <p>El Príncipe representa la elegancia y la tradición de la cultura picotera del Caribe colombiano. Su nombre transmite autoridad y distinción dentro de un movimiento musical donde cada picó construye su propia identidad y conquista a sus seguidores.</p>  
+      </div>  
+    </article>  
+
+  </div>  
+</section>  
+
+<section id="galeria" class="seccion">  
+  <h2>Galería</h2>  
+  <div class="galeria">  
+    <img src="{{ url_for('static', filename='img/rumbero.jpg') }}" alt="El Rumbero Mayor">  
+    <img src="{{ url_for('static', filename='img/demoledor.jpg') }}" alt="El Demoledor">  
+    <img src="{{ url_for('static', filename='img/timbalero.jpg') }}" alt="El Timbalero">  
+    <img src="{{ url_for('static', filename='img/coreano.jpg') }}" alt="El Coreano">  
+    <img src="{{ url_for('static', filename='img/skorpion.jpg') }}" alt="El Skorpion">  
+    <img src="{{ url_for('static', filename='img/rojo.jpg') }}" alt="El Rojo">  
+  </div>  
+</section>
+
+  </main>  </body>  
+</html>

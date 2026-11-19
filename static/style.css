@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #000000;
+  --texto: #e8e8e8;
+  --acento: #ff6a00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.hero-texto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-texto h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  letter-spacing: 8px;
+  color: #fff;
+}
+
+.hero-texto p {
+  font-size: 1.3rem;
+  color: var(--acento);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #222;
+}
+
+.menu a {
+  color: var(--texto);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--acento);
+}
+
+.seccion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.seccion h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: var(--acento);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.seccion p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  max-width: 800px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background: #241300;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: var(--acento);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.tarjeta h3 {
+  padding: 15px 15px 5px;
+  font-size: 1.3rem;
+}
+
+.tarjeta p {
+  padding: 0 15px 20px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.4s, filter 0.4s;
+  filter: grayscale(40%);
+}
+
+.galeria img:hover {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #222;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    gap: 15px;
+  }
+  .hero {
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+}

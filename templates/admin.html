@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar eventos - Galaxy Picotero</title>
+</head>
+<body>
+
+    <h1>Panel de administración</h1>
+
+    <a href="{{ url_for('eventos') }}">Ver página pública</a>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+
+    <hr>
+
+    <h2>Agregar evento</h2>
+
+    <form action="{{ url_for('agregar_evento') }}" method="POST">
+
+        <input type="text" name="pico" placeholder="Nombre del picó" required>
+
+        <input type="text" name="evento" placeholder="Nombre del evento" required>
+
+        <input type="date" name="fecha" required>
+
+        <input type="time" name="hora" required>
+
+        <input type="text" name="direccion" placeholder="Dirección o lugar" required>
+
+        <button type="submit">Guardar evento</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Eventos registrados</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Picó</th>
+                <th>Evento</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Dirección</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for e in eventos %}
+            <tr>
+                <td>{{ e.id }}</td>
+                <td>{{ e.pico }}</td>
+                <td>{{ e.evento }}</td>
+                <td>{{ e.fecha }}</td>
+                <td>{{ e.hora }}</td>
+                <td>{{ e.direccion }}</td>
+
+                <td>
+                    <a href="{{ url_for('editar_evento', id=e.id) }}">
+                        Editar
+                    </a>
+
+                    <form action="{{ url_for('eliminar_evento', id=e.id) }}"
+                          method="POST">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* SECCIÓN DE EVENTOS */
+
+.eventos {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.eventos h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.eventos p {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR DE LA TABLA */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+/* TABLA */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #151515;
+    border: 1px solid #7136b8;
+}
+
+/* CELDAS Y ENCABEZADOS */
+
+th, td {
+    padding: 18px 12px;
+    text-align: center;
+    border: 1px solid #7136b8;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* ENCABEZADOS */
+
+th {
+    background-color: #4b1680;
+    font-weight: bold;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+th:hover {
+    background-color: #6020a0;
+}
