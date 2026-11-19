@@ -6,7 +6,18 @@
     <title>Eventos | Galaxy Picotero</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='eventos.css') }}">
 </head>
-<body>
+<body> 
+    <div class="menu-contenedor menu-eventos">
+  <button class="menu-boton" onclick="document.querySelector('.menu-opciones').classList.toggle('activo')">
+    ☰
+  </button>
+
+  <nav class="menu-opciones">
+    <a href="{{ url_for('pick_ups') }}">Inicio / Pick Ups</a>
+    <a href="{{ url_for('redes_sociales') }}">Redes sociales</a>
+    <a href="{{ url_for('eventos') }}">Eventos</a>
+  </nav>
+</div>
 
     <section class="eventos">
 

@@ -70,3 +70,46 @@ th {
 th:hover {
     background-color: #6020a0;
 }
+.menu-contenedor {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.menu-boton {
+  background: #6a0dad;
+  color: white;
+  border: 1px solid #a855f7;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menu-opciones {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  min-width: 180px;
+  background: #1b1025;
+  border: 1px solid #a855f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu-opciones.activo {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-opciones a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.menu-opciones a:hover {
+  background: #6a0dad;
+}
